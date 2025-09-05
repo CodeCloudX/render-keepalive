@@ -2,8 +2,8 @@ name: Keep Render Awake
 
 on:
   schedule:
-    - cron: "*/13 * * * *"   # har 13 minute me chalega
-  workflow_dispatch:          # manually bhi trigger kar sakte ho
+    - cron: "*/13 * * * *"  
+  workflow_dispatch:      
 
 jobs:
   ping:
