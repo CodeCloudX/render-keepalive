@@ -1,0 +1,13 @@
+name: Keep Render Awake
+
+on:
+  schedule:
+    - cron: "*/13 * * * *"   # har 13 minute me chalega
+  workflow_dispatch:          # manually bhi trigger kar sakte ho
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl to Render app
+        run: curl -s https://pdfmaster-t8w6.onrender.com > /dev/null
